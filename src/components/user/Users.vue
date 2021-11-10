@@ -211,7 +211,7 @@ export default {
       // 控制分配角色对话框的显示与隐藏
       setRoleDialogVisible: false,
       // 需要被分配角色的用户信息
-      userInfo: {},
+      userInfo:{},
       // 所有角色的数据列表
       rolesList: [],
       // 已选中的角色Id值
@@ -369,7 +369,7 @@ export default {
         return this.$message.error('请选择要分配的角色！')
       }
 
-      const { data: res } = await this.$http.put(
+      const { data: res} = await this.$http.put(
         `users/${this.userInfo.id}/role`,
         {
           rid: this.selectedRoleId
