@@ -212,7 +212,7 @@ return this.$message.error('删除权限失败')
           this.$refs.addFormRef.validate(async valid=>{
             if(!valid) return
             const{data:res}=await this.$http.post('roles',this.addForm)
-            if(res.meta.status !=200){
+            if(res.meta.status !=201){
               this.$message.success('添加权限失败')
           }
            this.$message.success('添加用户成功！')
