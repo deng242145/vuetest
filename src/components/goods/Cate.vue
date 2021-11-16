@@ -146,9 +146,7 @@ export default {
       if (res.meta.status !== 200) {
         return this.$message.error('获取商品分类失败！')
       }
-
-      console.log(res.data)
-      // 把数据列表，赋值给 catelist
+    // 把数据列表，赋值给 catelist
       this.catelist = res.data.result
       // 为总数据条数赋值
       this.total = res.data.total
@@ -180,7 +178,6 @@ export default {
         return this.$message.error('获取父级分类数据失败！')
       }
 
-      console.log(res.data)
       this.parentCateList = res.data
     },
     // 选择项发生变化触发这个函数
